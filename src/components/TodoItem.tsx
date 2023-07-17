@@ -11,10 +11,10 @@ export const TodoItem: FC<{ index: number }> = (props) => {
     Boolean(state.done[index])
   );
 
-  // const onChange = useCallback(
-  //   () => dispatch(setDone(index, !done)),
-  //   [index, done, dispatch]
-  // );
+  const onChange = useCallback(
+    () => dispatch(setDone(index, !done)),
+    [index, done, dispatch]
+  );
 
   return (
     <div data-testid="list-item" className={done ? "done" : ""}>
