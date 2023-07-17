@@ -33,6 +33,7 @@
         "e2e": "playwright test --project=chromium && playwright show-report",
         "e2e-ci": "CI=true playwright test --project=chromium",
         "test-ci": "CI=true npm test -- --reporters=\"default\" --reporters=\"jest-html-reporter\" --reporters=\"jest-teamcity\"",
+        "lint": "eslint --ext .ts,.tsx \"src\"",
         "postinstall": "npx husky install && npx husky add .husky/commit-msg  'npx --no -- commitlint --edit ${1}'"
     },
     "eslintConfig": {
@@ -63,6 +64,9 @@
         "@commitlint/config-conventional": "^17.6.6",
         "@playwright/test": "^1.28.0",
         "@types/react-helmet": "^6.1.5",
+        "eslint": "^8.45.0",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
         "husky": "^8.0.3",
         "jest-html-reporter": "^3.7.0"
     }
